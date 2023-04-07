@@ -13,14 +13,18 @@ namespace OpTime_Saas.Service.Implimentation.Implementation
     public class ServiceHolder : IServiceHolder
     {
         private UserFunctionsService _userFunctionsService;
+        private UserCreditService _userCreditService;
         private UserManager<User> _userManager;
         private IUnitOfWOrk _unitOfWok;
 
-        public ServiceHolder(IUnitOfWOrk unitOfWok)
+        public ServiceHolder(IUnitOfWOrk unitOfWok,  UserManager<User> userManager)
         {
             _unitOfWok = unitOfWok;
+            _userManager = userManager;
         }
 
         public IUserFunctionsService UserFunctionsService => _userFunctionsService = _userFunctionsService ?? new UserFunctionsService(_userManager , _unitOfWok);
+
+        public IUserCreditService UserCreditService => _userCreditService = _userCreditService ?? new UserCreditService(_unitOfWok);
     }
 }

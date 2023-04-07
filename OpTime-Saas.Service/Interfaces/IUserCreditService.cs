@@ -8,9 +8,9 @@ namespace OpTime_Saas.Service.Interfaces
 {
     public interface IUserCreditService
     {
-        public Task<string> GetRoute();
-        public Task<string> GetDistance();
-        public Task<string> GetDuration();
+        public   Task<string> GetRoute(string userId);
+        public   Task<string> GetDistance(string userId);
+        public   Task<string> GetDuration(string userId);
 
     }
 }

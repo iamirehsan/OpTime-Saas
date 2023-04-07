@@ -8,6 +8,7 @@ namespace OpTime_Saas.Repository.Implimentation
     public class UnitOfWork : IUnitOfWOrk
     {
         private  UserCreditRepository _userCreditRepository;
+        private UserRepository _userRepository;
         private ApplicationDbContext _context;
 
         public UnitOfWork(ApplicationDbContext context)
@@ -27,9 +28,12 @@ namespace OpTime_Saas.Repository.Implimentation
 
         public IUserCreditRepository UserCreditRepository => _userCreditRepository = _userCreditRepository ?? new UserCreditRepository(_context) ;
 
+        public IUserRepository UserRepository => _userRepository = _userRepository ?? new UserRepository(_context);
+
         public void Dispose()
         {
             _context.Dispose(); 
         }
+
     }
 }

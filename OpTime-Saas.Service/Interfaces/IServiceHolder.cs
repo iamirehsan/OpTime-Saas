@@ -9,5 +9,6 @@ namespace OpTime_Saas.Service.Interfaces
     public interface IServiceHolder
     {
         public IUserFunctionsService UserFunctionsService { get; }
+        public IUserCreditService UserCreditService { get;  }
     }
 }

@@ -14,12 +14,12 @@ namespace OpTime_Saas.Domain.Entities
         public bool IsExpired { get; set; }
         public User User { get; set; }
 
-        public UserCredit(int credit, DateTime expirationDate , User user ):base()
+        public UserCredit(int credit, DateTime expirationDate   ):base()
         {
             Credit = credit;
             ExpirationDate = expirationDate;
             IsExpired = false;
-            User = user;
+           
         }
     }
 }

@@ -12,5 +12,6 @@ namespace OpTime_Saas.Repository
         Task CommitAsync();
         void Commit();
         public IUserCreditRepository UserCreditRepository { get; }
+        public IUserRepository UserRepository { get; }
     }
 }
