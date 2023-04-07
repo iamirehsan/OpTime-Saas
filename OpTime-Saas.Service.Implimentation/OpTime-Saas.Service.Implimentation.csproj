@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>OpTime_Saas.Service.Implimentation</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpTime-Saas.Infrastructure\OpTime-Saas.Infrastructure.csproj" />
+    <ProjectReference Include="..\OpTime-Saas.Repository\OpTime-Saas.Repository.csproj" />
+    <ProjectReference Include="..\OpTime-Saas.Service\OpTime-Saas.Service.csproj" />
+  </ItemGroup>
+
+</Project>
