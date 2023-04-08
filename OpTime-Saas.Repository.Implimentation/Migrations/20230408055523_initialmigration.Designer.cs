@@ -12,8 +12,8 @@ using OpTime_Saas.Repository.Implimentation;
 namespace OpTime_Saas.Repository.Implimentation.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230407183612_first")]
-    partial class first
+    [Migration("20230408055523_initialmigration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

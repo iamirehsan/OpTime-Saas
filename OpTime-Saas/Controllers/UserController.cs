@@ -20,7 +20,7 @@ namespace OpTime_Saas.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginCommand cmd)
         {
-            var result = _serviceHolder. UserFunctionsService.Login(cmd);
+            var result = await _serviceHolder.UserFunctionsService.Login(cmd);
             try
             {
                 return Ok(result);
@@ -35,10 +35,10 @@ namespace OpTime_Saas.Controllers
         [HttpPost("Signup")]
         public async Task<IActionResult> Signup(UserCreditCommand cmd)
         {
-            var result = _serviceHolder.UserFunctionsService.CreateUser(cmd);
+             await _serviceHolder.UserFunctionsService.CreateUser(cmd);
             try
             {
-                return Ok(result);
+                return Ok("کاربر ساخنه شد. ");
             }
 
             catch (ManagedException ex)

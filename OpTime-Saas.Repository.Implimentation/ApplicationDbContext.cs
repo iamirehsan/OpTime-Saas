@@ -11,7 +11,8 @@ namespace OpTime_Saas.Repository.Implimentation
         {
         }
         public DbSet<UserCredit> userCredits{ get; set; }
-  
+        public DbSet<User> users { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
